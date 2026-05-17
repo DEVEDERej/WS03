@@ -1,0 +1,444 @@
+/* ============================================================
+   WORKOPIA — CUSTOM STYLESHEET
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lexend:wght@100..900&display=swap');
+
+/* ----------------------------------------------------------------
+   SECTION 1: MGA KULAY (Colors)
+   ---------------------------------------------------------------- */
+
+:root {
+  --color-header: #031644;
+  --color-accent: #093FC8;
+  --color-page-bg: #E7EDFE;
+  --color-card-bg: #E7EDFE;
+  --color-heading: #E6FEF1;
+  --color-body-text: #010818;
+  --color-link: #010818;
+  --color-tag-bg: #093fc8;
+  --color-tag-text: #E6FEF1;
+  --color-footer: #031644;
+  --showcase-overlay: rgba(0, 0, 0, 0.5);
+  --card-border-color: #BBCDFC;
+}
+
+/* ----------------------------------------------------------------
+   SECTION 2: MGA FONT (Typography)
+   ---------------------------------------------------------------- */
+
+:root {
+  --font-heading: 'Verdana', sans-serif;
+  --font-body: 'Google Sans', sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   SECTION 3: HUGIS AT ESTILO (Shape & Style)
+   ---------------------------------------------------------------- */
+
+:root {
+  --border-radius: 4px;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================================================
+   BASE STYLES
+   ================================================================ */
+
+body,
+h5,
+h6 {
+  font-family: var(--font-body) !important;
+  background-color: var(--color-page-bg) !important;
+}
+
+h3,
+h4 {
+  font-family: var(--font-heading) !important;
+  color: var(--color-header) !important;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading) !important;
+  color: var(--color-heading) !important;
+}
+
+a {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+header {
+  background-color: var(--color-header) !important;
+  padding: 1rem;
+}
+
+.showcase {
+  background-image: url('../images/showcase.jpg') !important;
+}
+
+.bg-blue-900,
+.bg-blue-800 {
+  background-color: var(--color-header) !important;
+}
+
+.bg-yellow-500 {
+  background-color: var(--color-accent) !important;
+}
+
+.text-yellow-500 {
+  color: var(--color-accent) !important;
+}
+
+.hover\:bg-yellow-600:hover {
+  background-color: var(--color-accent) !important;
+  filter: brightness(0.88);
+}
+
+.bg-blue-500 {
+  background-color: var(--color-accent) !important;
+}
+
+.bg-white {
+  background-color: var(--color-card-bg) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--card-shadow) !important;
+  border: 1px solid var(--card-border-color) !important;
+}
+
+.bg-white:hover {
+  border-color: var(--color-accent) !important;
+  transition: all 0.3s ease !important;
+}
+
+.bg-white.rounded-lg {
+  border-left-width: 3px !important;
+  border-left-color: var(--color-accent) !important;
+}
+
+.bg-indigo-100 {
+  background-color: var(--color-tag-bg) !important;
+}
+
+.text-indigo-700,
+.text-indigo-800 {
+  color: var(--color-tag-text) !important;
+}
+
+.text-blue-700,
+.text-blue-500,
+.text-blue-900 {
+  color: var(--color-link) !important;
+}
+
+button,
+.rounded,
+.rounded-lg,
+.rounded-full {
+  border-radius: var(--border-radius) !important;
+  transition: all 0.3s ease;
+}
+
+.overlay {
+  background-color: var(--showcase-overlay) !important;
+}
+
+footer,
+.bg-indigo-900 {
+  background-color: var(--color-footer) !important;
+  padding: 1rem;
+}
+
+.bg-gray-100 {
+  background-color: var(--color-page-bg) !important;
+}
+
+header .bg-white,
+footer .bg-white,
+nav .bg-white {
+  border: none !important;
+}
+
+/* ================================================================
+   DARK MODE STYLES
+   ================================================================ */
+
+[data-theme="dark"] {
+  --color-page-bg: #1a1a1a;
+  --color-card-bg: #2d2d2d;
+  --color-header: #0a0a0a;
+  --color-body-text: #e0e0e0;
+  --color-heading: #ffffff;
+  --color-footer: #0a0a0a;
+  --card-border-color: #404040;
+  --showcase-overlay: rgba(0, 0, 0, 0.7);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--color-page-bg) !important;
+  color: var(--color-body-text) !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  color: var(--color-heading) !important;
+}
+
+[data-theme="dark"] .bg-white {
+  background-color: var(--color-card-bg) !important;
+  border-color: var(--card-border-color) !important;
+}
+
+[data-theme="dark"] .bg-gray-100 {
+  background-color: #3a3a3a !important;
+}
+
+[data-theme="dark"] .text-gray-700,
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-800 {
+  color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] .text-gray-500 {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] span,
+[data-theme="dark"] li,
+[data-theme="dark"] div {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] a {
+  color: #6eb5ff !important;
+}
+
+[data-theme="dark"] .text-blue-700,
+[data-theme="dark"] .text-blue-500,
+[data-theme="dark"] .text-blue-900 {
+  color: #6eb5ff !important;
+}
+
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="password"],
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: #3a3a3a !important;
+  color: #e0e0e0 !important;
+  border-color: #505050 !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #808080 !important;
+}
+
+[data-theme="dark"] .message {
+  background-color: #2d2d2d !important;
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .bg-green-100 {
+  background-color: #1a4d2e !important;
+}
+
+[data-theme="dark"] .text-green-700 {
+  color: #90ee90 !important;
+}
+
+[data-theme="dark"] .bg-red-100 {
+  background-color: #4d1a1a !important;
+}
+
+[data-theme="dark"] .text-red-700 {
+  color: #ff6b6b !important;
+}
+
+[data-theme="dark"] .bg-blue-900,
+[data-theme="dark"] .bg-blue-800 {
+  background-color: #1a2332 !important;
+}
+
+[data-theme="dark"] .bg-blue-900 h2,
+[data-theme="dark"] .bg-blue-800 h2,
+[data-theme="dark"] .bg-blue-900 p,
+[data-theme="dark"] .bg-blue-800 p {
+  color: #ffffff !important;
+}
+
+/* Force white text in banners for both light and dark mode */
+.bg-blue-900 h2,
+.bg-blue-800 h2,
+.bg-blue-900 p,
+.bg-blue-800 p {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-white h2,
+[data-theme="dark"] .bg-white h3,
+[data-theme="dark"] .bg-white h4 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-white p,
+[data-theme="dark"] .bg-white li,
+[data-theme="dark"] .bg-white span {
+  color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] .bg-indigo-100 {
+  background-color: #3a3a5a !important;
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .text-indigo-700,
+[data-theme="dark"] .text-indigo-800 {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .bg-yellow-500,
+[data-theme="dark"] .bg-yellow-600 {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .text-black {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] button,
+[data-theme="dark"] .btn {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-yellow-500 button,
+[data-theme="dark"] .bg-yellow-600 button {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] ul.bg-gray-100 {
+  background-color: #3a3a3a !important;
+}
+
+[data-theme="dark"] header {
+  background-color: #0a0a0a !important;
+}
+
+[data-theme="dark"] header h1 a {
+  color: #6eb5ff !important;
+}
+
+[data-theme="dark"] header a,
+[data-theme="dark"] header button {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] footer {
+  background-color: #0a0a0a !important;
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] footer p {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .showcase h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .form-heading,
+[data-theme="dark"] .text-4xl,
+[data-theme="dark"] .text-3xl,
+[data-theme="dark"] .text-2xl,
+[data-theme="dark"] .text-xl {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .form-subheading {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .message ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+[data-theme="dark"] .message ul li {
+  color: inherit !important;
+  padding: 4px 0;
+}
+
+[data-theme="dark"] .text-xl.font-semibold {
+  color: #ffffff !important;
+}
+
+/* Job listing titles - black in light mode, white in dark mode */
+.text-xl.font-semibold {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .rounded-lg.shadow-md.bg-white h2 {
+  color: #ffffff !important;
+}
+
+/* Ensure job card titles are visible */
+.rounded-lg h2.text-xl {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .rounded-lg h2.text-xl {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-white .text-center {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .bg-white label {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .bg-yellow-500 {
+  color: #000000 !important;
+}
+
+[data-theme="dark"] .bg-yellow-500 span,
+[data-theme="dark"] .bg-yellow-500 i {
+  color: #000000 !important;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Better 404 page styling */
+.text-9xl {
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.bg-blue-500 span,
+.bg-yellow-500 span {
+  color: inherit !important;
+}
