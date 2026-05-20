@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dancing+Script:wght@400..700&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lexend:wght@100..900&display=swap');
 
 /* ----------------------------------------------------------------
-   SECTION 1: MGA KULAY (Colors)
+   COLOR VARIABLES
    ---------------------------------------------------------------- */
 
 :root {
@@ -24,7 +24,7 @@
 }
 
 /* ----------------------------------------------------------------
-   SECTION 2: MGA FONT (Typography)
+   TYPOGRAPHY
    ---------------------------------------------------------------- */
 
 :root {
@@ -32,40 +32,33 @@
   --font-body: 'Google Sans', sans-serif;
 }
 
-/* ----------------------------------------------------------------
-   SECTION 3: HUGIS AT ESTILO (Shape & Style)
-   ---------------------------------------------------------------- */
-
 :root {
   --border-radius: 4px;
   --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* ================================================================
+/* ----------------------------------------------------------------
    BASE STYLES
-   ================================================================ */
+   ---------------------------------------------------------------- */
 
 body,
 h5,
 h6 {
   font-family: var(--font-body) !important;
   background-color: var(--color-page-bg) !important;
+  color: var(--color-body-text) !important;
 }
 
 h3,
 h4 {
   font-family: var(--font-heading) !important;
-  color: var(--color-header) !important;
-}
-
-h2 .form-heading {
-  font-family: var(--font-heading) !important;
   color: var(--color-body-text) !important;
 }
 
-h1{
+h1,
+h2 {
   font-family: var(--font-heading) !important;
-  color: var(--color-heading) !important;
+  color: var(--color-body-text) !important;
 }
 
 a {
@@ -77,18 +70,50 @@ a:hover {
   opacity: 0.8;
 }
 
+/* ----------------------------------------------------------------
+   HEADER & NAVIGATION
+   ---------------------------------------------------------------- */
+
 header {
   background-color: var(--color-header) !important;
   padding: 1rem;
 }
 
+header h1,
+header h2 {
+  color: var(--color-heading) !important;
+}
+
+/* ----------------------------------------------------------------
+   SHOWCASE
+   ---------------------------------------------------------------- */
+
 .showcase {
   background-image: url('../images/showcase.jpg') !important;
 }
 
+.showcase h2 {
+  color: #ffffff !important;
+}
+
+.overlay {
+  background-color: var(--showcase-overlay) !important;
+}
+
+/* ----------------------------------------------------------------
+   BUTTONS & COLORS
+   ---------------------------------------------------------------- */
+
 .bg-blue-900,
 .bg-blue-800 {
   background-color: var(--color-header) !important;
+}
+
+.bg-blue-900 h2,
+.bg-blue-800 h2,
+.bg-blue-900 p,
+.bg-blue-800 p {
+  color: #ffffff !important;
 }
 
 .bg-yellow-500 {
@@ -108,6 +133,10 @@ header {
   background-color: var(--color-accent) !important;
 }
 
+/* ----------------------------------------------------------------
+   CARDS
+   ---------------------------------------------------------------- */
+
 .bg-white {
   background-color: var(--color-card-bg) !important;
   border-radius: var(--border-radius) !important;
@@ -124,6 +153,24 @@ header {
   border-left-width: 3px !important;
   border-left-color: var(--color-accent) !important;
 }
+
+.bg-white h2,
+.bg-white h3,
+.bg-white h4,
+.bg-white p,
+.bg-white li,
+.bg-white span,
+.bg-white strong {
+  color: var(--color-body-text) !important;
+}
+
+.bg-gray-100 {
+  background-color: var(--color-page-bg) !important;
+}
+
+/* ----------------------------------------------------------------
+   TAGS & BUTTONS
+   ---------------------------------------------------------------- */
 
 .bg-indigo-100 {
   background-color: var(--color-tag-bg) !important;
@@ -148,9 +195,9 @@ button,
   transition: all 0.3s ease;
 }
 
-.overlay {
-  background-color: var(--showcase-overlay) !important;
-}
+/* ----------------------------------------------------------------
+   FOOTER
+   ---------------------------------------------------------------- */
 
 footer,
 .bg-indigo-900 {
@@ -158,19 +205,53 @@ footer,
   padding: 1rem;
 }
 
-.bg-gray-100 {
-  background-color: var(--color-page-bg) !important;
+footer h1,
+footer h2,
+footer p {
+  color: #ffffff !important;
 }
 
-header .bg-white,
-footer .bg-white,
-nav .bg-white {
-  border: none !important;
+/* ----------------------------------------------------------------
+   FORMS & INPUTS
+   ---------------------------------------------------------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  color: var(--color-body-text) !important;
+  background-color: #ffffff !important;
 }
 
-/* ================================================================
-   DARK MODE STYLES
-   ================================================================ */
+/* ----------------------------------------------------------------
+   MESSAGES
+   ---------------------------------------------------------------- */
+
+.message {
+  border-radius: var(--border-radius) !important;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.bg-green-100 {
+  background-color: #d4edda !important;
+}
+
+.text-green-700 {
+  color: #155724 !important;
+}
+
+.bg-red-100 {
+  background-color: #f8d7da !important;
+}
+
+.text-red-700 {
+  color: #721c24 !important;
+}
+
+/* ----------------------------------------------------------------
+   DARK MODE
+   ---------------------------------------------------------------- */
 
 [data-theme="dark"] {
   --color-page-bg: #0f0f1e;
@@ -204,59 +285,32 @@ nav .bg-white {
   border-color: var(--card-border-color) !important;
 }
 
+[data-theme="dark"] .bg-white h2,
+[data-theme="dark"] .bg-white h3,
+[data-theme="dark"] .bg-white h4,
+[data-theme="dark"] .bg-white p,
+[data-theme="dark"] .bg-white li,
+[data-theme="dark"] .bg-white span,
+[data-theme="dark"] .bg-white strong {
+  color: #e0e0e0 !important;
+}
+
 [data-theme="dark"] .bg-gray-100 {
-  background-color: #3a3a3a !important;
-}
-
-[data-theme="dark"] .text-gray-700,
-[data-theme="dark"] .text-gray-600,
-[data-theme="dark"] .text-gray-800 {
-  color: #d0d0d0 !important;
-}
-
-[data-theme="dark"] .text-gray-500 {
-  color: #a0a0a0 !important;
-}
-
-[data-theme="dark"] p,
-[data-theme="dark"] span,
-[data-theme="dark"] li,
-[data-theme="dark"] div {
-  color: #e0e0e0;
-}
-
-[data-theme="dark"] strong {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] a {
-  color: #6eb5ff !important;
-}
-
-[data-theme="dark"] .text-blue-700,
-[data-theme="dark"] .text-blue-500,
-[data-theme="dark"] .text-blue-900 {
-  color: #6eb5ff !important;
+  background-color: #2a2a3e !important;
 }
 
 [data-theme="dark"] input[type="text"],
 [data-theme="dark"] input[type="email"],
 [data-theme="dark"] input[type="password"],
-[data-theme="dark"] textarea,
-[data-theme="dark"] select {
-  background-color: #3a3a3a !important;
+[data-theme="dark"] textarea {
+  background-color: #2a2a3e !important;
   color: #e0e0e0 !important;
-  border-color: #505050 !important;
+  border-color: #3d3d5c !important;
 }
 
 [data-theme="dark"] input::placeholder,
 [data-theme="dark"] textarea::placeholder {
   color: #808080 !important;
-}
-
-[data-theme="dark"] .message {
-  background-color: #2d2d2d !important;
-  color: #e0e0e0 !important;
 }
 
 [data-theme="dark"] .bg-green-100 {
@@ -280,155 +334,18 @@ nav .bg-white {
   background-color: #1a2332 !important;
 }
 
-[data-theme="dark"] .bg-blue-900 h2,
-[data-theme="dark"] .bg-blue-800 h2,
-[data-theme="dark"] .bg-blue-900 p,
-[data-theme="dark"] .bg-blue-800 p {
-  color: #ffffff !important;
-}
-
-/* Force white text in banners for both light and dark mode */
-.bg-blue-900 h2,
-.bg-blue-800 h2,
-.bg-blue-900 p,
-.bg-blue-800 p {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .bg-white h2,
-[data-theme="dark"] .bg-white h3,
-[data-theme="dark"] .bg-white h4 {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .bg-white p,
-[data-theme="dark"] .bg-white li,
-[data-theme="dark"] .bg-white span {
-  color: #d0d0d0 !important;
-}
-
-[data-theme="dark"] .bg-indigo-100 {
-  background-color: #3a3a5a !important;
-  color: #e0e0e0 !important;
-}
-
-[data-theme="dark"] .text-indigo-700,
-[data-theme="dark"] .text-indigo-800 {
-  color: #e0e0e0 !important;
-}
-
-[data-theme="dark"] .bg-yellow-500,
-[data-theme="dark"] .bg-yellow-600 {
-  color: #000000 !important;
-}
-
-[data-theme="dark"] .text-black {
-  color: #000000 !important;
-}
-
-[data-theme="dark"] button,
-[data-theme="dark"] .btn {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .bg-yellow-500 button,
-[data-theme="dark"] .bg-yellow-600 button {
-  color: #000000 !important;
-}
-
-[data-theme="dark"] ul.bg-gray-100 {
-  background-color: #3a3a3a !important;
-}
-
 [data-theme="dark"] header {
-  background-color: #0a0a0a !important;
-}
-
-[data-theme="dark"] header h1 a {
-  color: #6eb5ff !important;
-}
-
-[data-theme="dark"] header a,
-[data-theme="dark"] header button {
-  color: #e0e0e0 !important;
+  background-color: #16213e !important;
 }
 
 [data-theme="dark"] footer {
-  background-color: #0a0a0a !important;
-  color: #e0e0e0 !important;
+  background-color: #0f0f1e !important;
 }
 
-[data-theme="dark"] footer p {
-  color: #b0b0b0 !important;
-}
+/* ----------------------------------------------------------------
+   THEME TOGGLE
+   ---------------------------------------------------------------- */
 
-[data-theme="dark"] .showcase h2 {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .form-heading,
-[data-theme="dark"] .text-4xl,
-[data-theme="dark"] .text-3xl,
-[data-theme="dark"] .text-2xl,
-[data-theme="dark"] .text-xl {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .form-subheading {
-  color: #b0b0b0 !important;
-}
-
-[data-theme="dark"] .message ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-[data-theme="dark"] .message ul li {
-  color: inherit !important;
-  padding: 4px 0;
-}
-
-[data-theme="dark"] .text-xl.font-semibold {
-  color: #ffffff !important;
-}
-
-/* Job listing titles - black in light mode, white in dark mode */
-.text-xl.font-semibold {
-  color: #000000 !important;
-}
-
-[data-theme="dark"] .rounded-lg.shadow-md.bg-white h2 {
-  color: #ffffff !important;
-}
-
-/* Ensure job card titles are visible */
-.rounded-lg h2.text-xl {
-  color: #000000 !important;
-}
-
-[data-theme="dark"] .rounded-lg h2.text-xl {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .bg-white .text-center {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] .bg-white label {
-  color: #e0e0e0 !important;
-}
-
-[data-theme="dark"] .bg-yellow-500 {
-  color: #000000 !important;
-}
-
-[data-theme="dark"] .bg-yellow-500 span,
-[data-theme="dark"] .bg-yellow-500 i {
-  color: #000000 !important;
-}
-
-/* Theme toggle button */
 #theme-toggle {
   cursor: pointer;
   font-size: 1.2rem;
@@ -436,15 +353,4 @@ nav .bg-white {
 
 #theme-toggle:hover {
   transform: scale(1.1);
-}
-
-/* Better 404 page styling */
-.text-9xl {
-  line-height: 1;
-  letter-spacing: -0.02em;
-}
-
-.bg-blue-500 span,
-.bg-yellow-500 span {
-  color: inherit !important;
 }

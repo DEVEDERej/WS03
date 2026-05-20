@@ -13,7 +13,7 @@ use Framework\Session;
         </div>
         <?php if (Session::has('user')) : ?>
             <a
-                href="<?= url('/listings/create') ?>"
+                href="<?= url('/listings/create') ?>" style="color: #ffffff !important;"
                 class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 py-2 rounded hover:shadow-md transition duration-300">
                 <i class="fa fa-edit"></i> Post a Job
             </a>

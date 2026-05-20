@@ -93,7 +93,7 @@ if (!function_exists('inspectAndDie')) {
 if (!function_exists('formatSalary')) {
     function formatSalary($salary)
     {
-        return '$' . number_format(floatval($salary));
+        return '₱' . number_format(floatval($salary));
     }
 }
 
